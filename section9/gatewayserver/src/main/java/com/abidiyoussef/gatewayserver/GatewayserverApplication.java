@@ -24,12 +24,12 @@ public class GatewayserverApplication {
 										.addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
 								.uri("lb://ACCOUNTS"))
 					.route(p -> p
-							.path("/eazybank/loans/**")
+							.path("/abidibank/loans/**")
 							.filters( f -> f.rewritePath("/abidibank/loans/(?<segment>.*)","/${segment}")
 									.addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
 							.uri("lb://LOANS"))
 					.route(p -> p
-							.path("/eazybank/cards/**")
+							.path("/abidibank/cards/**")
 							.filters( f -> f.rewritePath("/abidibank/cards/(?<segment>.*)","/${segment}")
 									.addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
 							.uri("lb://CARDS")).build();
