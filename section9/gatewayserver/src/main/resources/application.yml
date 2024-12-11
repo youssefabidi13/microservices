@@ -1,64 +1,36 @@
-# Spring configuration
 spring:
-  # Application configuration
   application:
-    # The name of the application
     name: "gatewayserver"
-
-  # Configuration import
   config:
-    # Import configuration from a Config Server (optional)
     import: "optional:configserver:http://localhost:8071/"
-
-  # Cloud Gateway configuration
   cloud:
     gateway:
-      # Discovery configuration
       discovery:
-        # Locator configuration
         locator:
-          # Enable/Disable the locator
           enabled: false
-          # Convert service IDs to lower case
           lowerCaseServiceId: true
 
-# Management endpoints configuration
 management:
-  # Web endpoints configuration
   endpoints:
     web:
-      # Expose all endpoints
       exposure:
         include: "*"
-  # Gateway endpoint configuration
   endpoint:
     gateway:
-      # Enable the gateway endpoint
       enabled: true
-  # Info endpoint configuration
   info:
-    # Environment information configuration
     env:
-      # Enable environment information
       enabled: true
 
-# Info configuration
 info:
-  # Application information
   app:
-    # Application name
     name: "gatewayserver"
-    # Application description
     description: "Abidi Bank Gateway Server Application"
-    # Application version
     version: "1.0.0"
 
-# Logging configuration
 logging:
-  # Level configuration
   level:
-    # com.youssefabidi.gatewayserver logging level
     com:
-      youssefabidi:
+      abidiyoussef:
         gatewayserver: DEBUG
-        # Set the logging level for the gatewayserver package to DEBUG
+
