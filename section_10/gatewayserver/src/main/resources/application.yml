@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: "gatewayserver"
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "Abidi Bank Gateway Server Application"
+    version: "1.0.0"
+
+logging:
+  level:
+    com:
+      abidiyoussef:
+        gatewayserver: DEBUG
+
+# Resilience4j Circuit Breaker configuration
+resilience4j.circuitbreaker:
+  # Define a default configuration for the circuit breaker
+  configs:
+    default:
+      # The size of the sliding window used to calculate the failure rate
+      slidingWindowSize: 10
+      # The number of calls allowed in the half-open state before switching to open
+      permittedNumberOfCallsInHalfOpenState: 2
+      # The threshold for the failure rate (in %) to switch to the open state
+      failureRateThreshold: 50
+      # The duration (in ms) to wait in the open state before attempting to recover
+      waitDurationInOpenState: 10000
