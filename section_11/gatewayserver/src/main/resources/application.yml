@@ -45,6 +45,8 @@ logging:
     com:
       abidiyoussef:
         gatewayserver: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 # Resilience4j Circuit Breaker configuration
 resilience4j.circuitbreaker:
@@ -59,3 +61,5 @@ resilience4j.circuitbreaker:
       failureRateThreshold: 50
       # The duration (in ms) to wait in the open state before attempting to recover
       waitDurationInOpenState: 10000
+
+

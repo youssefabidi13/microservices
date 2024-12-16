@@ -1,8 +1,8 @@
 server:
-  port: 9000
+  port: 8090
 spring:
   application:
-    name: "cards"
+    name: "loans"
   profiles:
     active: "prod"
   datasource:
@@ -42,6 +42,7 @@ management:
   info:
     env:
       enabled: true
+
   metrics:
     tags:
       application: ${spring.application.name}
@@ -61,14 +62,12 @@ eureka:
 
 info:
   app:
-    name: "cards"
-    description: "AbidiBank Cards Application"
+    name: "loans"
+    description: "AbidiBank Loans Application"
     version: "1.0.0"
 
 logging:
   level:
     com:
       abidiyoussef:
-        cards: DEBUG
-  pattern:
-    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+        loans: DEBUG
