@@ -1,0 +1,6 @@
+dependencies:
+- name: eazybank-common
+  repository: file://../../abidibank-common
+  version: 0.1.0
+digest: sha256:0d78adbb1615e32507f74266a660e7fa6ad0421e353c4f87f187c8b96482de35
+generated: "2024-12-21T16:51:37.8169998+01:00"
