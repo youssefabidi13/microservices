@@ -1,0 +1,6 @@
+dependencies:
+- name: abidibank-common
+  repository: file://../../abidibank-common
+  version: 0.1.0
+digest: sha256:ef5c023d25c45fdf45603642b7039e0b33946344956031773301301a5cf7bbe0
+generated: "2024-12-21T17:12:31.9077404+01:00"

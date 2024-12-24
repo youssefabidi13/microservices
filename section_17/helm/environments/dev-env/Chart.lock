@@ -1,0 +1,24 @@
+dependencies:
+- name: abidibank-common
+  repository: file://../../abidibank-common
+  version: 0.1.0
+- name: configserver
+  repository: file://../../abidibank-services/configserver
+  version: 0.1.0
+- name: accounts
+  repository: file://../../abidibank-services/accounts
+  version: 0.1.0
+- name: cards
+  repository: file://../../abidibank-services/cards
+  version: 0.1.0
+- name: loans
+  repository: file://../../abidibank-services/loans
+  version: 0.1.0
+- name: gatewayserver
+  repository: file://../../abidibank-services/gatewayserver
+  version: 0.1.0
+- name: message
+  repository: file://../../abidibank-services/message
+  version: 0.1.0
+digest: sha256:68deb5e6acce7c371207b986f5ff234e3eb2be375c16ba3249f5fc2341929c07
+generated: "2024-12-24T18:07:59.2956297+01:00"
